@@ -284,7 +284,7 @@ CREATE TABLE IF NOT EXISTS public.message
 	message_created TIMESTAMPTZ NOT null DEFAULT NOW(),
 	message_to integer NOT NULL, 
 	message_from integer NOT NULL,
-	message_read boolean NOT NULL,
-	message_archived boolean NOT NULL,
+	message_read boolean NOT NULL DEFAULT FALSE,
+	message_archived boolean NOT NULL DEFAULT FALSE,
 	CONSTRAINT message_pkey PRIMARY KEY (message_id)
 );
